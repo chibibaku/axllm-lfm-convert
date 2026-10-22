@@ -1,0 +1,9 @@
+{
+  "device": "cpu",
+  "cache": ".cache",
+  "output_directory": "dist",
+  "jobs": 1,
+  "min_free_gib": 20,
+  "min_memory_gib": 18,
+  "pulsar2_version": "7.0-patch1"
+}

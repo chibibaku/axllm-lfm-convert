@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+set -euo pipefail
+root="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
+export PYTHONPATH="$root${PYTHONPATH:+:$PYTHONPATH}"
+if [[ -x "$root/.venv/bin/python" ]]; then
+  exec "$root/.venv/bin/python" -m lfm_convert "$@"
+fi
+exec python3 -m lfm_convert "$@"

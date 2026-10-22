@@ -1,0 +1,19 @@
+name: Python tests
+
+on:
+  push:
+    paths: ['lfm_convert/**', 'tests/**', 'defaults.json', '.github/workflows/convert.yml']
+  pull_request:
+    paths: ['lfm_convert/**', 'tests/**', 'defaults.json', '.github/workflows/convert.yml']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  tests:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - name: Run lightweight tests
+        run: python3 -m unittest discover -s tests -v

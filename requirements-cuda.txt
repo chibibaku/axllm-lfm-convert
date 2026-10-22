@@ -1,0 +1,9 @@
+# Install torch from the CUDA wheel index in `./lfm setup --device cuda`.
+transformers==5.2.0
+accelerate==1.15.0
+safetensors==0.8.0
+huggingface-hub==1.33.0
+numpy==2.5.3
+onnx==1.23.1
+onnxruntime==1.30.0
+psutil==7.2.2
